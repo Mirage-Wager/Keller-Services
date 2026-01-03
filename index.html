@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Download</title>
+<link rel="icon" href="dowload.png" type="image/png">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: #e2e8f0;
+  min-height: 100vh;
+  background: #05070f;
+  padding: 20px;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: -20%;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(0,207,255,0.35), transparent 40%),
+    radial-gradient(circle at 80% 30%, rgba(138,43,226,0.35), transparent 45%),
+    radial-gradient(circle at 50% 80%, rgba(0,255,170,0.25), transparent 40%),
+    radial-gradient(circle at 10% 90%, rgba(255,0,128,0.25), transparent 45%);
+  filter: blur(120px);
+  z-index: -2;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(5,7,15,0.6), rgba(5,7,15,0.9));
+  z-index: -1;
+}
+
+.container {
+  max-width: 900px;
+  margin: 80px auto;
+  background: rgba(10, 15, 30, 0.65);
+  border-radius: 24px;
+  border: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+  overflow: hidden;
+  animation: fadeIn 0.6s ease-out;
+}
+
+.header {
+  padding: 50px 40px 35px;
+  background: linear-gradient(135deg, rgba(0,10,30,0.8), rgba(0,40,80,0.6));
+}
+
+h1 {
+  font-size: 2.4rem;
+  background: linear-gradient(90deg, #ffffff, #00CFFF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  margin-top: 12px;
+  color: #94a3b8;
+}
+
+.content {
+  padding: 50px;
+  text-align: center;
+}
+
+.card {
+  background: rgba(15, 23, 42, 0.55);
+  border-radius: 20px;
+  padding: 40px;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+.card p {
+  color: #cbd5e1;
+  margin-bottom: 30px;
+  line-height: 1.7;
+}
+
+.download-btn {
+  display: inline-block;
+  padding: 18px 42px;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #00CFFF, #0077ff);
+  color: #020617;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  box-shadow: 0 10px 30px rgba(0,207,255,0.45);
+  transition: 0.3s ease;
+}
+
+.download-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 40px rgba(0,207,255,0.65);
+}
+
+.file-info {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #94a3b8;
+}
+
+footer {
+  padding: 30px;
+  text-align: center;
+  background: rgba(0,10,30,0.7);
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+footer span {
+  background: linear-gradient(90deg, #00CFFF, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .content { padding: 30px; }
+  h1 { font-size: 1.8rem; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <div class="header">
+    <h1>Download do Sistema</h1>
+    <p class="subtitle">Clique abaixo para baixar o instalador</p>
+  </div>
+
+  <div class="content">
+    <div class="card">
+      <p>
+        Baixe a versão oficial do <strong>KellerServices</strong>.
+        Após o download, execute o arquivo para instalar.
+      </p>
+
+      <!-- BOTÃO FUNCIONAL -->
+      <a href="KellerServices.exe" download class="download-btn">
+        ⬇ Baixar KellerServices.exe
+      </a>
+
+      <div class="file-info">
+        Windows • Arquivo EXE
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <span>Keller Services</span><br>
+    <small style="color:#94a3b8;">© 2026</small>
+  </footer>
+</div>
+
+</body>
+</html>
